@@ -1,13 +1,15 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Ivwc2NCJ)
-## Ödeme işlemleri uygulaması
+## Payment Processing Application
 
-Kullanıcıdan kredi kartı bilgilerini kullanarak ödeme yapmasına izin veren bir uygulama yapınız. Kullanıcı ödeme yaparken ödeme tutarını, kart numarasını, son kullanma tarihini ve güvenlik kodunu girmelidir. Kullanıcıdan bilgiler alındıktan sonra bir doğrulama işlemi yapılmalıdır, kısıtlamalar aşağıdadır (Kısıtlamalar için özel exception sınıfları oluşturun, örn. InvalidAmountException, InvalidCardNumberException ). Kısıtlamaları geçtikten sonra **pay** isimli bir metod çağırılmalıdır. Bu metod içerisinde 0-100 arasında bir random sayı üretin, eğer sayı 75'den yüksek ise kendinizin oluşturacağı ***SystemNotWorkingException*** fırlatın ve işlemi bir kez daha deneyin.
 
-- Ödeme tutarının formatı doğru olmalıdır, negatif bir değer veya virgüllü bir değer girilemez.
-- Kullanıcının girdiği kart numarası doğru olmalıdır (16 haneli, rakamlardan oluşan)
-- Son kullanma tarihi (12/2013) gibi geçmiş bir yıl yada 13 gibi bir ay girilemez.
-- Güvenlik kodu formatı doğru olmalı (3 karakter, rakamlardan oluşan)
-- Ödeme işlemi sırasında bir hata oluştuğunda özel olarak oluşturacağınız SystemNotWorkingException fırlatılmalı, ve 1 defa tekrar işlem denenmeli.
+## This project was given by UP School Java Developer Program. Instructions were:
 
-Uygulamanın akışında, kısıtlamalar uygulandığı sürece serbestsiniz. 
+Make an application that allows the user to pay using their credit card information. When paying, the user must enter the payment amount, card number, expiration date and security code. After receiving the information from the user, a verification process must be performed, the constraints are below (Create custom exception classes for constraints, e.g. InvalidAmountException, InvalidCardNumberException). 
+Once the restrictions have passed, a method called **pay** should be invoked. Generate a random number between 0-100 in this method, throw your own ***SystemNotWorkingException*** if the number is higher than 75, and try the operation again.
+
+- The format of the payment amount must be correct, a negative value or a comma value cannot be entered.
+- The card number entered by the user must be correct (16 digits, consisting of digits)
+- An expiration date cannot be entered in a past year such as (12/2013) or a month such as 13.
+- The security code format must be correct (3 characters, consisting of numbers)
+- When an error occurs during the payment process, the SystemNotWorkingException that you will create specifically should be thrown, and the operation should be tried again 1 time.
+
 
